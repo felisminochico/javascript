@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txt1" style=" width: 30px; height: 20px; margin-bottom: 6px;">
+    <span> + </span>
+    <input type="number" name="txt2" id="txt2" style=" width: 30px; height: 20px; margin-bottom: 6px;">
+    <span> = </span>
+    <output id="resultado">0</output> <br>
+    <input type="button" value="Somar" onclick="soma()">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+
+    <script>
+        
+
+        function soma() {
+           var txt1 = window.document.getElementById('txt1')
+           var txt2 = window.document.getElementById('txt2')
+           var n1 = Number(txt1.value)
+           var n2 = Number(txt2.value)
+           var resultado = n1 + n2
+           window.document.getElementById('resultado').innerHTML = resultado
+            
+        }
+
+        function multiplicar(){
+            var txt1 = window.document.getElementById('txt1')
+            var txt2 = window.document.getElementById('txt2')
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var resultado = n1 * n2
+            window.document.getElementById('resultado').innerHTML = resultado
+        }
+    </script>
+</body>
+</html>

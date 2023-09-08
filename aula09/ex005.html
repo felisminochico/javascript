@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(81, 81, 218);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div name="teste">Testando por nomes...</div>
+    <div class="testec">Testando por classes...</div>
+    <div id="testeid">Testando a maneira recente com id</div>
+    <div class="testeclasse">Testando a maneira recente com classe</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.getElementsByTagName('body')[0]
+        window.document.write('Está escrito assim: ' + p1.innerHTML);
+
+        p1.style.backgroundColor = 'black'
+        p1.style.fontSize = '19px'
+
+        corpo.style.backgroundColor = '#762199'
+
+        window.document.getElementById('msg').innerHTML = 'Consegui dessa maneira';
+        window.document.getElementById('msg').style.backgroundColor = '#769812';
+        window.document.getElementById('msg').style.padding = '5px' 
+        
+        window.document.getElementsByName('teste')[0].innerHTML = 'Funcionou por nome...';
+        window.document.getElementsByName('teste')[0].style.backgroundColor = '#902165'
+
+        window.document.getElementsByClassName('testec')[0].innerHTML = 'Funcionou por classe...';
+        window.document.getElementsByClassName('testec')[0].style.backgroundColor = '#219989'
+
+        window.document.querySelector('div#testeid').style.color = 'black'
+
+        window.document.querySelectorAll('div.testeclasse')[0].innerHTML = 'Funcionou a nova maneira com classe...'
+        </script>
+</body>
+</html>

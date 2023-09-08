@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt'br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Formatando String</h1> 
+
+    <script>
+        var Nome = window.prompt('Digite o teu nome')
+        document.writeln(`${Nome}, o teu nome tem ${Nome.length} letras. <br>`)
+        document.writeln(`Seu nome em letras maiúsculas é ${Nome.toUpperCase()} <br>`)
+        document.writeln(`Seu nome em letras minúsculas é ${Nome.toLowerCase()}`) 
+        
+    </script>
+</body>
+</html>

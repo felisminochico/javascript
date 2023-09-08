@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trânsito</title>
+</head>
+<body>
+    <h1>Sistema de velocidades</h1>
+    <p>
+        Velocidade do carro: 
+        <input type="number" name="vel1" id="vel1"> Km/h
+        <input type="button" value="Verificar" id="clicar">
+    </p>
+    <div id="resultado">
+        Teste
+    </div>
+
+    <script>
+        var clicar = window.document.getElementById('clicar');
+        clicar.addEventListener('click', verificar);
+        
+        function verificar(){
+            var vel1 = window.document.getElementById('vel1');
+            var velocidade = Number(vel1.value);
+
+            document.getElementById('resultado').innerHTML = 'A sua velocidade é de <strong>' + velocidade + 'Km/h.</strong> <p>Dirija sempre com cinto de segurança!</p>';
+
+            if(velocidade > 60){
+                window.document.getElementById('resultado').innerHTML += '<p>Você estás <strong>MULTADO.</strong> Velocidade acima do limite.' 
+            }
+
+        }
+    </script>
+</body>
+</html>

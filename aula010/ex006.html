@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: green;
+            color: white;
+            font: normal normal normal 26px Arial, Helvetica, Verdana, sans-serif;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        window.document.getElementById('area').addEventListener('click', clicou);
+        window.document.getElementById('area').addEventListener('mouseenter', entrou)
+        window.document.getElementById('area').addEventListener('mousemove', moveu)
+        window.document.getElementById('area').addEventListener('mouseout', saiu)
+        window.document.getElementById('area').addEventListener('mousedown', pressionando)
+        function clicou() {
+            window.document.getElementById('area').innerText = 'Clicou!';
+            window.document.getElementsByTagName('div')[0].style.backgroundColor = 'blue'
+        }
+
+        function entrou() {
+            window.document.getElementById('area').innerHTML = 'Entrou!'
+            window.document.getElementById('area').style.backgroundColor = 'black'
+        }
+
+        function moveu(){
+            window.document.getElementById('area').innerHTML = 'Moveu';
+            window.document.getElementById('area').style.backgroundColor = 'red'
+        }
+
+        function saiu() {
+            var s = window.document.getElementById('area')
+            s.innerHTML = 'Saiu!'
+            s.style.backgroundColor = '#767676'
+        }
+
+        function pressionando() {
+            window.document.getElementById('area').innerHTML = 'Pressionando...'
+            window.document.getElementById('area').style.backgroundColor = 'yellow'
+            document.getElementById('area').style.color = 'black'
+        }
+    </script>
+</body>
+</html>

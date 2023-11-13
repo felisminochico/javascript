@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+</head>
+<body>
+    <h1>Repetições</h1>
+
+    <p>
+        Digite o número da tabuada: <input type="number" name="txtn1" id="txtn1" min="0">
+    </p>
+    <p>
+        <button onclick="verificar()">Verificar</button>
+    </p>
+
+    <div>Resultado</div>
+    <script>
+       function verificar(){
+           var c = 1
+           var número = window.document.getElementById('txtn1');
+           var res = window.document.getElementsByTagName('div')[0];
+
+           do{
+            res = Number(c) * Number(número.value);
+            window.document.write(`${número.value} x ${c} = ${res} <br>`);
+            c++
+           }while(c <= 12);
+           
+           //while(c <= 12){
+            //res = Number(c) * Number(número.value);
+            //window.document.write(`${número.value} x ${c} = ${res} <br>`);
+            //c++
+           //}
+        }
+    </script>
+</body>
+</html>

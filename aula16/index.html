@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function parimpar(n){
+            if(n % 2 == 0){
+                return 'O número ' + n + ' é par.'
+            }else if(n % 2 == 1){
+                return 'O número ' + n + ' é ímpar.'
+            }
+        }
+
+         let resultado = parimpar(51)
+
+         document.write(resultado)
+    </script>
+</body>
+</html>

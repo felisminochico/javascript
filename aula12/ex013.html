@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Digite a hora: <input type="number" name="txt1" id="txt1">
+        <input type="button" value="Verificar">
+    </p>
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        window.document.getElementsByTagName('input')[1].addEventListener('click', verificar)
+
+        function verificar(){
+            var txt1 = window.document.getElementById('txt1');
+            var agora = new Date();
+            var hora = agora.getHours();
+            
+            if(hora < 12){
+                window.document.getElementById('res').innerHTML = '<p>Bom dia!</p>';
+                window.document.getElementById('res').innerHTML += "<p>São exatamente " + hora + ' horas.'
+            }else if(hora < 18){
+                window.document.getElementById('res').innerHTML = '<p>Boa tarde!</p>';
+                window.document.getElementById('res').innerHTML += '<p>São exatamente ' + hora + ' horas.'
+            }else if(hora < 23){
+                window.document.getElementById('res').innerHTML = '<p>Boa noite!</p>';
+                window.document.getElementById('res').innerHTML += '<p>São exatamente ' + hora + ' horas.'
+            }else {
+                window.document.getElementById('res').innerHTML = '<p style="color: red;">ERRO!!!</p>';
+                window.document.getElementById('res').innerHTML += '<p>Hora inexistente!</p>';
+            }
+        }
+    </script>
+</body>
+</html>

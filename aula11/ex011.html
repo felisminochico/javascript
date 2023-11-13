@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>JavaScript</title>
 </head>
 <body>
-    <h1>Exercício de país</h1>
-    <input type="number" name="txt1" id="txt1">
-    <input type="button" value="Verificar">
+    <main>
+        <p>
+            Digite o teu país:<input type="text" name="txt1" id="txt1">
+            <input type="button" value="Verificar">
+        </p>
+        <div>
+        
+        </div>
+        <div>
+        
+        </div>
+    </main>
+
+    <script>
+        window.document.getElementsByTagName('input')[1].addEventListener('click', verificar);
+
+        function verificar(){
+            var país = 'Angola'
+            var txt1 = window.document.getElementById('txt1');
+            var sugestão = String(txt1.value)
+            var res = window.document.getElementsByTagName('div')[1]
+
+            window.document.getElementsByTagName('div')[0].innerHTML = `Vivendo em  <strong>${sugestão}!</strong>`
+
+            if(sugestão == país){
+                res.innerHTML = 'Você és <strong>Angolano</strong>!'
+            }else{
+                res.innerHTML = 'Você és <strong>Estrangeiro</strong>!'
+            }
+            
+            
+        }
+    </script>
 </body>
 </html>

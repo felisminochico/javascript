@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Digite a tua idade: <input type="number" name="txt1" id="txt1">
+       <input type="button" value="Verificar">
+    </p>
+    <div>
+
+    </div>
+    <div id="res">
+        Resultado...
+    </div>
+
+    <script>
+        window.document.getElementsByTagName('input')[1].addEventListener('click', verificar);
+
+        function verificar(){
+            var txt1 = window.document.getElementsByTagName('input')[0];
+            var idade = Number(txt1.value)
+
+            window.document.getElementsByTagName('div')[0].innerHTML = `Você tens ${idade} anos de idade.`;
+
+            if(idade < 16){
+                window.document.getElementById('res').innerHTML = 'Não vota!'
+            }else{
+                if(idade >= 16 && idade < 18){
+                window.document.getElementById('res').innerHTML = 'Voto opcional!'
+                }else{
+                    if(idade >= 18 && idade <= 120){
+                        window.document.getElementById('res').innerHTML = 'Voto obrigatório!'
+                    }else if(idade > 120){
+                        window.document.getElementById('res').innerHTML = 'Mereces descansar, já és mais velhos!'
+                    }
+                }
+
+            } 
+                
+            
+            
+        
+        }
+    </script>
+</body>
+</html>

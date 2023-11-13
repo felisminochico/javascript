@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        h1{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <div>
+        Resultado
+    </div>
+
+    <script>
+        var resultado = window.document.getElementsByTagName('div')[0];
+        var agora = new Date();
+        var diaSem = agora.getDay()
+
+        switch(diaSem){
+            case 0:
+                resultado.innerHTML = 'Domingo';
+                break
+            
+            case 1:
+                resultado.innerHTML = 'Segunda-feira';
+                break
+
+            case 2:
+                resultado.innerHTML = 'Terça-feira';
+                break
+
+            case 3:
+                resultado.innerHTML = 'Quarta-feira';
+                break
+
+            case 4:
+                resultado.innerHTML = 'Quinta-feira';
+                break
+
+            case 5:
+                resultado.innerHTML = 'Sexta-feira';
+                break
+
+            case 6:
+                resultado.innerHTML = 'Sábado';
+                break
+
+            default:
+                resultado.innerHTML = '[ERRO] DIA INVÁLIDO!';
+                break
+
+        }
+    </script>
+</body>
+</html>
